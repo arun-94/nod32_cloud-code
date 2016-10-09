@@ -291,11 +291,6 @@ Parse.Cloud.define("ValidatesLink", function(request, response) {
         success: function(user) {
             
             if (user != null) {
-            	response.success(
-            			{'a':false, 
-            			 'b' : sessionCheck, 
-            			 'c' : request.params.token
-            			});
             	var sessionCheck = md5.hex_md5(user.get("md5Password"));
             	
             	if(sessionCheck == request.params.token) {
