@@ -300,16 +300,12 @@ Parse.Cloud.define("ValidateLink", function(request, response) {
             		console.log("Session key is invalid " + sessionCheck);
             		console.log("The session received from request " + request.params.token);
 
-            		response.success(
-            			{'a':false, 
-            			 'b' : sessionCheck, 
-            			 'c' : request.params.token
-            			});
+            		response.success(false);
             	}
 	    	}
 	    	else {
 	    		console.log("User is invalid");
-	    		response.success({'a':false, 'b' : sessionCheck, 'c' : request.params.token});
+	    		response.success(false);
 	    	}
 	    },
 	    error: function(user, error) {
