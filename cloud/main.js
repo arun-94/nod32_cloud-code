@@ -282,7 +282,7 @@ Parse.Cloud.define("ForgotPassword", function(request, response) {
     });
 });
 
-Parse.Cloud.define("ValidatesLink", function(request, response) {
+Parse.Cloud.define("ValidateLink", function(request, response) {
 
 
     var query = new Parse.Query(Parse.User);
